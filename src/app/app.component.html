@@ -1,0 +1,15 @@
+<app-header></app-header>
+
+<main>
+    <ul>
+        <li *ngFor="let user of users" class="marginBottom">
+            <app-users [user]="user.name" [userId]="user.id" (select)="onSelect($event)">
+            </app-users>
+           
+        </li>
+    </ul>
+    <div *ngIf="selectedUserId">
+        <app-tasks  [testId]="selectedUser!.id" [userName]="selectedUser!.name"></app-tasks>
+    </div>
+    <p *ngIf="!selectedUserId">Select a User to get user related task</p>
+</main>
