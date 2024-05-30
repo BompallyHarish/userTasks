@@ -10,6 +10,7 @@ export class AppComponent {
   public users = DUMMY_USERS
   title = 'userList';
   public selectedUserId!: string
+  public isAddingTask: Boolean = false
 
   onSelect(id: string) {
     this.selectedUserId = id
@@ -19,6 +20,11 @@ export class AppComponent {
     return this.users.find((user) => user.id === this.selectedUserId);
   }
 
+  onSelect1() {
+    // console.log()
+    this.isAddingTask = true
+    console.log('test ',this.isAddingTask)
+  }
 
 
 }

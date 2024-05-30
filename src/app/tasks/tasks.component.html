@@ -2,7 +2,7 @@
     <header>
         <h1>{{userName}}'s Tasks</h1>
         <menu>
-            <button>Add Task</button>
+            <button (click)="onSelectingAdd()">Add Task</button>
         </menu>
     </header>
     <ul>
@@ -14,5 +14,8 @@
 
         </li>
     </ul>
+    <div *ngIf="isAddTask1">
+        <app-new-task (close)="onCancel()"></app-new-task>
+    </div>
 
 </section>
