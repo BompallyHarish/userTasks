@@ -12,6 +12,7 @@ export class TasksComponent implements OnInit {
   @Input() userName!: string
   @Output() addTask = new EventEmitter<Boolean>()
   @Input() isAddTask1 !: Boolean
+  @Output() closeTask= new EventEmitter<void>() 
   private tasks = [
     {
       id: 't1',
@@ -38,18 +39,19 @@ export class TasksComponent implements OnInit {
     },
   ];
   ngOnInit(): void {
-    console.log(this.isAddTask1)
+    // console.log(this.isAddTask1)
   }
   get userTasks() {
     return this.tasks.filter((x) => x.userId === this.testId)
   }
   onSelectingAdd() {
-    console.log('true1')
+    // console.log('true1')
     this.addTask.emit()
   }
   onCancel() {
     this.isAddTask1= false
-    console.log(this.isAddTask1)
+    this.closeTask.emit()
+    // console.log(this.isAddTask1)
   }
 
 }

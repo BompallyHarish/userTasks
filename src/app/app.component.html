@@ -9,7 +9,7 @@
         </li>
     </ul>
     <div *ngIf="selectedUserId">
-        <app-tasks  [testId]="selectedUser!.id" [userName]="selectedUser!.name" (addTask)="onSelect1()" [isAddTask1]="isAddingTask"></app-tasks>
+        <app-tasks  [testId]="selectedUser!.id" [userName]="selectedUser!.name" (addTask)="onSelect1()" [isAddTask1]="isAddingTask" (closeTask)="onClosing()"></app-tasks>
     </div>
     <p *ngIf="!selectedUserId">Select a User to get user related task</p>
 </main>

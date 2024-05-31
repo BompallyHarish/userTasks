@@ -25,6 +25,8 @@ export class AppComponent {
     this.isAddingTask = true
     console.log('test ',this.isAddingTask)
   }
-
+  onClosing(){
+    this.isAddingTask = false
+  }
 
 }

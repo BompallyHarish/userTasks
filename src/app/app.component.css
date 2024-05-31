@@ -5,7 +5,7 @@ main {
     display: grid;
     grid-auto-flow: row;
     gap: 2rem;
-    background-color: rgb(155, 175, 229);
+    background-color:#e4e2e7;
     border-radius: 10px;
   }
   
@@ -43,5 +43,8 @@ main {
 
   .marginBottom{
     margin-bottom: 10px;
+  }
+  ul{
+    list-style: none;
   }
   

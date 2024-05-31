@@ -1,3 +1,9 @@
 .marginBottom{
     margin-bottom: 20px;
 }
+button{
+   align-items: center;
+    border-radius: 10px;
+    background-color: #9965dd;
+    color: #150722;
+}
