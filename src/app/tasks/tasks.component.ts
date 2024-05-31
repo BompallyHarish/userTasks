@@ -53,5 +53,15 @@ export class TasksComponent implements OnInit {
     this.closeTask.emit()
     // console.log(this.isAddTask1)
   }
+  addTaskData(data: {title:string, summary: string,date: string, userId: string}){
+    // console.log('Adding data ', data.userId)
+      this.tasks.push({
+        id: new Date().getTime().toString(),
+        userId: data.userId,
+        title: data.title,
+        summary: data.summary,
+        dueDate: data.date
+      })
+  }
 
 }

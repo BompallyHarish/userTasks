@@ -15,7 +15,7 @@
         </li>
     </ul>
     <div *ngIf="isAddTask1">
-        <app-new-task (close)="onCancel()"></app-new-task>
+        <app-new-task (close)="onCancel()" (taskData)="addTaskData($event)" [userId]="testId"></app-new-task>
     </div>
 
 </section>
